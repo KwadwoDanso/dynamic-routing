@@ -1,16 +1,53 @@
-# React + Vite
+# Blog Routing Lab
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small blog application built with React and React Router. Demonstrates dynamic routing, route parameters, a React Context auth system, and a protected admin route.
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [Overview](#overview)
+- [How to run](#how-to-run)
+- [Features](#features)
+- [Routes](#routes)
+- [Built with](#built-with)
+- [Author](#author)
 
-## React Compiler
+## Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+JavaScript React Router handles the URL  component mapping. A single AuthContext manages login state across the app.
 
-## Expanding the ESLint configuration
+## How to run
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173`.
+
+## Features
+
+- Blog index page listing all posts
+- Dynamic blog post pages — each post has its own URL based on its slug
+- "Post not found" message for invalid slugs
+- Mock in-memory data (3 sample posts)
+- Auth Context with isAuthenticated, login(), logout()
+- Login page with a single "Log In" button
+- Navbar conditionally shows Login or Logout based on auth state
+- Protected /admin route — unauthenticated users get redirected to /login
+
+
+## Built with
+
+- React 
+- React Router DOM
+- Vite 
+- CSS
+
+## Author
+
+- Kwadwo Danso
+- GitHub: [KwadwoDanso](https://github.com/KwadwoDanso)
+
+## Acknowledgement
+- Per Scholas Dynamic Routing module
+- AI for styling 
